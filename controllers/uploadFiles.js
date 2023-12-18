@@ -39,7 +39,8 @@ exports.uploadFiles=async(req, res)=>{
             border: "0", 
             // "format": "A4"
           };
-          pdf.create(html,options).toFile(`certificate${data[i].id}_${data[i].name}.pdf`,(err,html)=>{
+          pdf.create(html,options).toBuffer(function(err, buffer){
+            console.log('This is a buffer:', Buffer.isBuffer(buffer));
             if(err){
               console.log("pdf not created");
             } else{
@@ -79,7 +80,10 @@ Chitkara university,
 7015378325`,
                 attachments:[
                   {
-                    path:html.filename
+                    filename:"certificate.pdf",
+                    content:buffer,
+                    contentType:"application/pdf",
+                    encoding:"base64",
                   }
                 ]
                 
@@ -94,7 +98,11 @@ Chitkara university,
 
 
 
-            }})
+            }
+            
+          });
+          // pdf.create(html,options).toFile(`certificate${data[i].id}_${data[i].name}.pdf`,(err,html)=>{
+          //  })
       }});
         }
         res.json({ message: "uploaded and converted the file to JSON", data });
