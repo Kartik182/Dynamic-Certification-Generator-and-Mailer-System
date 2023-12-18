@@ -33,13 +33,14 @@ exports.uploadFiles=async(req, res)=>{
           console.log("error while rendering");
         }else{
           let options={
-            height: "242px",
-            width: "576px", 
-            border: "0", 
+            
             childProcessOptions: {
               env: {
                 OPENSSL_CONF: '/dev/null',
               },
+              height: "242px",
+              width: "576px", 
+              border: "0", 
             }
             // "format": "A4"
           };
