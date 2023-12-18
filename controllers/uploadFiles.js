@@ -40,7 +40,7 @@ exports.uploadFiles=async(req, res)=>{
               },
               
             },
-            height: "505px",
+            height: "502px",
               width: "576px", 
               border: "0"
 
