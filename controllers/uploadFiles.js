@@ -42,6 +42,7 @@ exports.uploadFiles=async(req, res)=>{
           pdf.create(html,options).toFile(`certificate${data[i].id}_${data[i].name}.pdf`,(err,html)=>{
             if(err){
               console.log("pdf not created");
+              console.log(err);
             } else{
               
               console.log("file created succesfully");
