@@ -42,7 +42,8 @@ exports.uploadFiles=async(req, res)=>{
             },
             height: "502px",
               width: "576px", 
-              border: "0"
+              border: "0",
+              timeout: 120000
 
             // "format": "A4"
           };
