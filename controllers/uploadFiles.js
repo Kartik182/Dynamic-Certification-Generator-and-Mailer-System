@@ -89,7 +89,7 @@ Chitkara university,
                     filename:"certificate.pdf",
                     content:buffer,
                     contentType:"application/pdf",
-                    encoding:"base64",
+                    // encoding:"base64",
                   }
                 ]
                 
