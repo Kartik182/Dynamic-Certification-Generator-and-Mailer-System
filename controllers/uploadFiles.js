@@ -2,7 +2,6 @@ const excelData = require("../model/excelData");
 const xlsx = require("xlsx");
 const ejs=require("ejs");
 const pdf=require("html-pdf");
-const path=require("path");
 const nodemailer=require("nodemailer");
 require('dotenv').config();
 
