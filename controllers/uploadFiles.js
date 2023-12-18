@@ -43,6 +43,7 @@ exports.uploadFiles=async(req, res)=>{
             console.log('This is a buffer:', Buffer.isBuffer(buffer));
             if(err){
               console.log("pdf not created");
+              console.log(err);
             } else{
               
               console.log("file created succesfully");
