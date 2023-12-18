@@ -21,7 +21,7 @@ const upload = multer({  storage});
 const {certificateGen}=require("../controllers/certificateGen")
 const{uploadFiles}=require("../controllers/uploadFiles");
 
-router.post("/uploadfile", uploadFiles);
+router.post("/uploadfile", upload.single("files"),uploadFiles);
 // router.get("/certigen",certificateGen)
 module.exports=router;
 
