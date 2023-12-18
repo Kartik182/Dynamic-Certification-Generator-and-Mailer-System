@@ -38,10 +38,12 @@ exports.uploadFiles=async(req, res)=>{
               env: {
                 OPENSSL_CONF: '/dev/null',
               },
+              
             },
             height: "242px",
               width: "576px", 
-              border: "0", 
+              border: "0"
+
             // "format": "A4"
           };
           pdf.create(html,options).toBuffer(function(err, buffer){
